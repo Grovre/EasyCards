@@ -19,12 +19,12 @@ class Player {
         return card;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public void setCard(Card card) {
         this.card = card;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {

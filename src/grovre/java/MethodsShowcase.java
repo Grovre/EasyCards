@@ -55,10 +55,10 @@ public class MethodsShowcase {
         System.out.println();
         System.out.println("Swapping the top card with any other card in the deck:");
         d = new Deck();
-        Card[] firstFiveCards = d.getDeckRange(0,5);
+        Card[] firstFiveCards = d.getDeckRange(0, 5);
         System.out.println("Here's the first five cards in a deck:\n" + Deck.toStringClean(firstFiveCards));
         d.swapTopCardWith(32);
-        firstFiveCards = d.getDeckRange(0,5);
+        firstFiveCards = d.getDeckRange(0, 5);
         System.out.println("Here's what they look like after switching the ace with with 4:\n" + Deck.toStringClean(firstFiveCards));
         System.out.println("It was swapped with a 7 of hearts!");
 
@@ -66,10 +66,10 @@ public class MethodsShowcase {
         System.out.println();
         System.out.println("Getting all of one suit from the deck:");
         d = new Deck();
-        Card[] suitArray = d.getDeckRange(0,13);
+        Card[] suitArray = d.getDeckRange(0, 13);
         System.out.println(Deck.toStringClean(suitArray));
         System.out.println("Or even a different suit:");
-        suitArray = d.getDeckRange(14,26);
+        suitArray = d.getDeckRange(14, 26);
         System.out.println(Deck.toStringClean(suitArray));
 
         // There are a few more swap methods and the ability to get a card's index and the index of a card

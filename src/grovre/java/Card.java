@@ -9,10 +9,10 @@ public class Card {
     protected int VALUE; // True value of a card, A can be 1 or 11 and all other cards are 1-10. Can be changed
 
     public Card(int value, boolean faceCardsAllEqual10) {
-        VALUE_ORDER = value+1;
-        VALUE_SHOW = new String[]{"A","2","3","4","5","6","7","8","9","10","J","Q","K"}[value];
-        this.VALUE = value+1;
-        if(faceCardsAllEqual10 && VALUE_ORDER > 10) {
+        VALUE_ORDER = value + 1;
+        VALUE_SHOW = new String[]{"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"}[value];
+        this.VALUE = value + 1;
+        if (faceCardsAllEqual10 && VALUE_ORDER > 10) {
             this.VALUE = 10;
         }
     }
@@ -55,12 +55,12 @@ public class Card {
         return VALUE_ORDER;
     }
 
-    public int getSUIT_ORDER() {
-        return SUIT_ORDER;
-    }
-
     public void setVALUE_ORDER(int VALUE_ORDER) {
         this.VALUE_ORDER = VALUE_ORDER;
+    }
+
+    public int getSUIT_ORDER() {
+        return SUIT_ORDER;
     }
 
     public int getVALUE() {

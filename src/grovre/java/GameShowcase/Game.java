@@ -4,7 +4,7 @@ import grovre.java.Deck;
 
 public class Game {
 
-    // Draws a random card from a deck. If it's greater then you win
+    // Draws a random card from a deck. If it's greater, then you win
     public static void main(String[] args) {
 
         // Make a randomized deck with face cards that are not the same value, and create a players array
