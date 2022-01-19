@@ -46,7 +46,6 @@ public class Deck {
     public String toString() {
         return "Deck{" +
                 "deck=" + Arrays.toString(deck) +
-                ", topOfDeckIndex=" + topOfDeckIndex +
                 '}';
     }
 
