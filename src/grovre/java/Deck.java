@@ -94,6 +94,11 @@ public class Deck {
         setTopOfDeckIndex(0);
     }
 
+    public void resetDeck() {
+        shuffleDeck();
+        setTopOfDeckIndex(0);
+    }
+
     public int getTopOfDeckIndex() {
         return topOfDeckIndex;
     }
