@@ -1,5 +1,7 @@
 package grovre.java;
 
+import java.util.ArrayList;
+
 public class MethodsShowcase {
 
     public static void main(String[] args) {
@@ -55,21 +57,21 @@ public class MethodsShowcase {
         System.out.println();
         System.out.println("Swapping the top card with any other card in the deck:");
         d = new Deck();
-        Card[] firstFiveCards = d.getDeckRange(0, 5);
+        ArrayList<Card> firstFiveCards = d.getDeckRange(0, 5);
         System.out.println("Here's the first five cards in a deck:\n" + Deck.toStringClean(firstFiveCards));
         d.swapTopCardWith(32);
         firstFiveCards = d.getDeckRange(0, 5);
-        System.out.println("Here's what they look like after switching the ace with with 4:\n" + Deck.toStringClean(firstFiveCards));
+        System.out.println("Here's what they look like after switching the ace with the card at index 32:\n" + Deck.toStringClean(firstFiveCards));
         System.out.println("It was swapped with a 7 of hearts!");
 
         // Need a range of cards from the deck? Try this method!
         System.out.println();
         System.out.println("Getting all of one suit from the deck:");
         d = new Deck();
-        Card[] suitArray = d.getDeckRange(0, 13);
+        ArrayList<Card> suitArray = d.getDeckRange(0, 13);
         System.out.println(Deck.toStringClean(suitArray));
         System.out.println("Or even a different suit:");
-        suitArray = d.getDeckRange(14, 26);
+        suitArray = d.getDeckRange(13, 26);
         System.out.println(Deck.toStringClean(suitArray));
 
         // There are a few more swap methods and the ability to get a card's index and the index of a card

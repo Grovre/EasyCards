@@ -28,10 +28,10 @@ public class Deck {
         if (randomizeDeck) randomizeDeck();
     }
 
-    public static String toStringClean(Card[] cardArray) {
-        StringBuilder str = new StringBuilder(cardArray[0].toStringClean());
-        for (int i = 1; i < cardArray.length; i++) {
-            str.append(", ").append(cardArray[i].toStringClean());
+    public static String toStringClean(ArrayList<Card> cardList) {
+        StringBuilder str = new StringBuilder(cardList.get(0).toStringClean());
+        for (int i = 1; i < cardList.size(); i++) {
+            str.append(", ").append(cardList.get(i).toStringClean());
         }
         return str.toString();
     }
@@ -43,7 +43,9 @@ public class Deck {
         for (int i = 13; i < 13 * 2; i++) tempDeck[i] = new Club(i - 13, faceCardsAllEqual10);
         for (int i = 13 * 2; i < 13 * 3; i++) tempDeck[i] = new Heart(i - 13 * 2, faceCardsAllEqual10);
         for (int i = 13 * 3; i < 13 * 4; i++) tempDeck[i] = new Diamond(i - 13 * 3, faceCardsAllEqual10);
-        return (ArrayList<Card>) Arrays.asList(tempDeck);
+        ArrayList<Card> toBeReturned = new ArrayList<>(tempDeck.length);
+        toBeReturned.addAll(Arrays.asList(tempDeck));
+        return toBeReturned;
     }
 
     @Override
